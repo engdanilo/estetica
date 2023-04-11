@@ -1,0 +1,29 @@
+{% load static %}
+
+    <!-- TESTIMONIAL -->
+    
+     <section class="testimonials section-padding" id="testimonials">
+          <div class="container">
+               <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-5 text-center">O Que Os Clientes Falam</h3>
+                        <div class="owl-carousel owl-theme" id="testimonials-carousel">
+                            {% for i in testemonial_random %}
+                            <div class="item">
+                                <div class="testimonials-thumb d-flex">
+                                    <div class="testimonials-image">
+                                        <img src="{{i.img_customer}}" class="img-fluid" alt="testimonials image">
+                                    </div>
+                                    <div class="testimonials-info">
+                                        <p>{{i.testemonial|linebreaks}}</p>
+                                        <h6 class="mb-0">{{i.customer_name}}</h6>
+                                        <span>{{i.profession}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+               </div>
+          </div>
+     </section>

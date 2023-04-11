@@ -1,0 +1,87 @@
+{% load static %}
+
+    <!--ABOUT-->
+
+    <section class="about testemonial-padding"  id="about">
+      <div class="container">
+        <div id="mainSlider" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            {%  for i in service %}
+            {% if forloop.counter0 == 0 %} 
+            <li data-target="#mainSlider" data-slide-to="{{forloop.counter0}}" class="active"></li>
+            {% else %}
+            <li data-target="#mainSlider" data-slide-to="{{forloop.counter0}}"></li>
+            {% endif %}{% endfor %}
+          </ol>
+          {% for i in service %}
+          {% if forloop.counter0 == 0%}
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row about-third">
+                <div class="col-lg-6 col-md-6 col-12">
+                  <h3 class="mb-4">{{ i.service_name }}</h3>
+                  <p>{{ i.service_text }}</p>
+                </div>
+                <div class="col-lg-5 mx-auto col-md-6 col-12">
+                  <img src="{{ i.img_service }}" class="about-image img-fluid" alt="{{i.service_name}}">
+                </div>
+                <div class="row about-third">
+                  <div class="col-lg-4 col-md-4 col-12">
+                    <h3>Benefícios</h3>
+                    <p>{{i.benefits}}</p>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12">
+                    <h3>Rotina</h3>
+                    <p>{{i.routines}}</p>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12">
+                    <h3>Cuidados</h3>
+                    <p>{{i.warnings}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% else %}
+            <div class="carousel-item">
+              <div class="row about-third">
+                <div class="col-lg-6 col-md-6 col-12">
+                  <h3 class="mb-4">{{ i.service_name }}</h3>
+                  <p>{{ i.service_text }}</p>
+                </div>
+                <div class="col-lg-5 mx-auto col-md-6 col-12">
+                  <img src="{{ i.img_service }}" class="about-image img-fluid" alt="{{i.service_name}}">
+                </div>
+                <div class="row about-third">
+                  <div class="col-lg-4 col-md-4 col-12">
+                    <h3>Benefícios</h3>
+                    <p>{{i.benefits}}</p>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12">
+                    <h3>Rotina</h3>
+                    <p>{{i.routines}}</p>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12">
+                    <h3>Cuidados</h3>
+                    <p>{{i.warnings}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {%endif%}
+            {% endfor %}
+            <!--Control right and left of the carousel-->
+            <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+   

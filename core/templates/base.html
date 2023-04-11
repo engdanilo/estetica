@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {%  for i in site_info %}
+    {% if forloop.counter == 1 %}
+     <title>{{ i.title }}</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="{{ i.site_description}}">
+     <meta name="keywords" content="{{ i.keywords }}">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+     <link rel="shortcut icon" type="image/png" href='{% static "images/favicon.png" %}'>
+     <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+     <link rel="stylesheet" href='{% static "css/all.min.css" %}'>
+     <link rel="stylesheet" href='{% static "css/owl.carousel.min.css" %}'>
+     <link rel="stylesheet" href='{% static "css/owl.theme.default.min.css" %}'>
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href='{% static "css/tooplate-ben-resume-style.css" %}'>
+<!--
+Tooplate 2120 Ben Resume
+https://www.tooplate.com/view/2120-ben-resume
+-->
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+  <!-- MENU BAR -->
+  <nav class="navbar navbar-expand-lg">
+      <div class="container">
+
+          <a class="navbar-brand" href="#">{{i.name}}</a>
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                      <a href="#intro" class="nav-link smoothScroll">Introdução</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="#about" class="nav-link smoothScroll">Procedimentos</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="#testimonials" class="nav-link smoothScroll">Depoimentos</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="#contact" class="nav-link smoothScroll">Contato</a>
+                  </li>
+              </ul>
+
+              <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
+                  <a href="{{ i.whatsapp }}" class="custom-btn btn" target="_blank">WhatsApp</a>
+              </div>
+          </div>
+
+      </div>
+  </nav>
+  {% endif %}
+{% endfor %}
+
+{% block content %}
+
+{% endblock %}
+
+<section class="contact section-padding pt-0" id="contact">
+<div class="container">
+  <div class="row"> 
+    </div>
+      <div class="row about-third">
+          <div class="mx-auto col-lg-4 col-md-6 col-12">
+              <h3 class="my-4 pt-4 pt-lg-0">Contato</h3>
+              {% for i in site_info %}
+                  {% if forloop.counter == 1 %}
+                  <p>{{i.email}}<i class="fas fa-arrow-right custom-icon"></i></p>
+                  <ul class="social-links mt-2">
+                      <li><a href="{{ i.instagram }}" rel="noopener" class="fab fa-instagram" alt="Link para o Instagram"></a></li>
+                      <li><a href="{{ i.whatsapp }}" rel="noopener" class="fab fa-whatsapp-square" alt="Link para o WhatsApp"></a></li>
+                  </ul>
+                  {%endif%}
+              {%endfor%}
+          </div>
+          <div class="mx-auto col-lg-4 col-md-6 col-12">
+          <p class="copyright-text mt-5 pt-3">Copyright &copy; 2023 Danilo Santana</p>  
+              <p>Parceiros: <a href="https://peekky.com" title="free HTML templates" target="_blank">Peekky</a></p>
+          </div>
+      </div>      
+  </div>
+</div>
+</section>
+<!-- SCRIPTS -->
+<script src='{% static "js/jquery.min.js" %}'></script>
+<script src='{% static "js/bootstrap.min.js" %}'></script>
+<script src='{% static "js/smoothscroll.js" %}'></script>
+<script src='{% static "js/owl.carousel.min.js" %}'></script>
+<script src='{% static "js/custom.js" %}'></script>
+
+</body>
+</html>

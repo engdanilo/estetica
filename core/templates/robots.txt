@@ -1,0 +1,11 @@
+User-agent: Googlebot
+
+User-agent: AdsBot-Google
+
+User-agent: Googlebot-Image
+
+User-agent: Mediapartners-Google
+
+User-agent: Slurp
+
+User-agent: Bingbot

@@ -1,0 +1,25 @@
+{% load static %}
+
+    <!-- HERO -->
+    {%  for i in site_info %}
+        {% if forloop.counter == 1 %}
+            <section class="hero d-flex flex-column justify-content-center align-items-center" id="intro">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="mx-auto col-lg-5 col-md-5 col-10">
+                            <img src="{{ i.img_hero }}" class="img-fluid" alt="Ben Resume HTML Template">
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-center align-items-center col-lg-7 col-md-7 col-12">
+                            <div class="hero-text">
+                                <h1 class="hero-title">Esteticista Facial</h1>
+                                <a href="{{i.instagram}}" class="email-link" target="_blank">Siga no Instagram</a><br>
+                                <a href="{{i.whatsapp}}" class="email-link" target="_blank">Fale pelo WhatsApp</a><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {%endif%}
+    {%endfor%}
