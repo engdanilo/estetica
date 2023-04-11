@@ -137,4 +137,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGOUT_REDIRECT_URL = 'index'
 
-CSRF_TRUSTED_ORIGINS = ['https://rafaelasantana.com', 'https://www.rafaelasantana.com', 'https://web-production-937c.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://rafaelasantana.com', 'https://www.rafaelasantana.com', 'https://web-production-d7579.up.railway.app']
