@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
-#Try 'whitenoise.runserver_nostatic',
+#added 'whitenoise.runserver_nostatic',
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,11 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'django_adminlte',
-    'django_adminlte_theme',
-
+    'django_adminlte_theme', 
 ]
 
-# Try "whitenoise.middleware.WhiteNoiseMiddleware",
+# Added "whitenoise.middleware.WhiteNoiseMiddleware",
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -56,7 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'estetica.urls'
