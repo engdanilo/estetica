@@ -22,10 +22,33 @@
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href='{% static "css/tooplate-ben-resume-style.css" %}'>
-<!--
-Tooplate 2120 Ben Resume
-https://www.tooplate.com/view/2120-ben-resume
--->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCVFFNMP9T"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YCVFFNMP9T');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11111178335"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-11111178335');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11111178335"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-11111178335');
+    </script>
 </head>
 
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
@@ -60,7 +83,7 @@ https://www.tooplate.com/view/2120-ben-resume
               </ul>
 
               <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                  <a href="{{ i.whatsapp }}" class="custom-btn btn" target="_blank" alt="Nos chame pelo WhatsApp"> WhatsApp</a>
+                <a onclick= "return gtag_report_conversion('{{ i.whatsapp }}');" href="{{ i.whatsapp }}" class="custom-btn btn" target="_blank" title="Clique para falar via WhatsApp">WhatsApp</a>
               </div>
           </div>
 
@@ -84,8 +107,8 @@ https://www.tooplate.com/view/2120-ben-resume
                   {% if forloop.counter == 1 %}
                   <p>{{i.email}}<i class="fas fa-arrow-right custom-icon"></i></p>
                   <ul class="social-links mt-2">
-                      <li><a href="{{ i.instagram }}" rel="noopener" class="fab fa-instagram" alt="Link para o Instagram"></a></li>
-                      <li><a href="{{ i.whatsapp }}" rel="noopener" class="fab fa-whatsapp-square" alt="Link para o WhatsApp"></a></li>
+                    <li><a onclick= "return gtag_report_conversion('{{ i.instagram }}');" href="{{ i.instagram }}" rel="noopener" class="fab fa-instagram" alt="Link para o Instagram"></a></li>
+                    <li><a onclick= "return gtag_report_conversion('{{ i.whatsapp }}');" href="{{ i.whatsapp }}" rel="noopener" class="fab fa-whatsapp-square" alt="Link para o WhatsApp"></a></li>
                   </ul>
                   {%endif%}
               {%endfor%}
