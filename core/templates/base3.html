@@ -3,14 +3,12 @@
 <html lang="en">
 <head>
 
-  {%  for i in site_info %}
-    {% if forloop.counter == 1 %}
-     <title>{{ i.title }}</title>
+     <title>Rafaela Santana Esteticista Facial</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="{{ i.site_description}}">
-     <meta name="keywords" content="{{ i.keywords }}">
+     <meta name="description" content="Rafaela Santana é especialista em estética facial, muito querida pelos seus clientes em função dos seus resultados. Venha fazer uma avaliação.">
+     <meta name="keywords" content="rafaela santana, esteticista facial goiania, estetica goiania, esteticista goiania, esteticista goias, esteticista facial goias, estetica facial, estetica facial goiania, peeling goiania, limpeza de pele goiania, limpeza pele goiania, microagulhamento goiania, microagulhamento, tratamento de rejuvenescimento goiania, limpeza de pele goias, esteticista itumbiara, esteticista goiatuba">
      <meta name="author" content="Tooplate">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -34,7 +32,7 @@ https://www.tooplate.com/view/2120-ben-resume
   <nav class="navbar navbar-expand-lg">
       <div class="container">
 
-          <a class="navbar-brand" href="#">{{i.name}}</a>
+          <a class="navbar-brand" href="#">Rafaela Santana</a>
           
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -66,37 +64,34 @@ https://www.tooplate.com/view/2120-ben-resume
 
       </div>
   </nav>
-  {% endif %}
-{% endfor %}
 
 {% block content %}
 
 {% endblock %}
 
 <section class="contact section-padding pt-0" id="contact">
-<div class="container">
-  <div class="row"> 
+    <div class="container">
+        <div class="row"> 
+            <div class="row about-third">
+                <div class="mx-auto col-lg-4 col-md-6 col-12">
+                    <h3 class="my-4 pt-4 pt-lg-0">Contato</h3>
+                    {% for i in site_info %}
+                        {% if forloop.counter == 1 %}
+                        <p>{{i.email}}<i class="fas fa-arrow-right custom-icon"></i></p>
+                        <ul class="social-links mt-2">
+                            <li><a href="{{ i.instagram }}" rel="noopener" class="fab fa-instagram" alt="Link para o Instagram"></a></li>
+                            <li><a href="{{ i.whatsapp }}" rel="noopener" class="fab fa-whatsapp-square" alt="Link para o WhatsApp"></a></li>
+                        </ul>
+                        {%endif%}
+                    {%endfor%}
+                </div>
+                <div class="mx-auto col-lg-4 col-md-6 col-12">
+                <p class="copyright-text mt-5 pt-3">Copyright &copy; 2023 Danilo Santana</p>  
+                    <p>Parceiros: <a href="https://peekky.com" title="free HTML templates" target="_blank">Peekky</a></p>
+                </div>
+            </div>      
+        </div>
     </div>
-      <div class="row about-third">
-          <div class="mx-auto col-lg-4 col-md-6 col-12">
-              <h3 class="my-4 pt-4 pt-lg-0">Contato</h3>
-              {% for i in site_info %}
-                  {% if forloop.counter == 1 %}
-                  <p>{{i.email}}<i class="fas fa-arrow-right custom-icon"></i></p>
-                  <ul class="social-links mt-2">
-                      <li><a href="{{ i.instagram }}" rel="noopener" class="fab fa-instagram" alt="Link para o Instagram"></a></li>
-                      <li><a href="{{ i.whatsapp }}" rel="noopener" class="fab fa-whatsapp-square" alt="Link para o WhatsApp"></a></li>
-                  </ul>
-                  {%endif%}
-              {%endfor%}
-          </div>
-          <div class="mx-auto col-lg-4 col-md-6 col-12">
-          <p class="copyright-text mt-5 pt-3">Copyright &copy; 2023 Danilo Santana</p>  
-              <p>Parceiros: <a href="https://peekky.com" title="free HTML templates" target="_blank">Peekky</a></p>
-          </div>
-      </div>      
-  </div>
-</div>
 </section>
 <!-- SCRIPTS -->
 <script src='{% static "js/jquery.min.js" %}'></script>
