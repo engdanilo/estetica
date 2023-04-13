@@ -50,7 +50,7 @@ https://www.tooplate.com/view/2120-ben-resume
     --h4-font-size:         34px;
     --h5-font-size:         30px;
     --h6-font-size:         24px;
-    --p-font-size:          7px;
+    --p-font-size:          18px;
     --base-font-size:       16px;
     --button-font-size:     20px;
 
@@ -100,7 +100,7 @@ https://www.tooplate.com/view/2120-ben-resume
   }
 
   p {
-    color: var(--p-color);
+    color: 6px;
     font-size: var(--p-font-size);
     font-weight: var(--font-weight-light);
     letter-spacing: 0.3px;
