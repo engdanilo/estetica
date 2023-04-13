@@ -11,7 +11,7 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['site_info'] = SiteData.objects.order_by().all()
-        context['service'] = Services.objects.order_by().all()
+        context['service'] = Services.objects.order_by('?').all()
         context['testemonial_random'] = Testemonials.objects.order_by('?').all()
         context['faq_random'] = FAQ.objects.order_by('?').all()
         return context
