@@ -101,7 +101,7 @@ https://www.tooplate.com/view/2120-ben-resume
 
   p {
     color: var(--p-color);
-    font-size: 6px;
+    font-size: var(--p-font-size);
     font-weight: var(--font-weight-light);
     letter-spacing: 0.3px;
     line-height: 2em;
