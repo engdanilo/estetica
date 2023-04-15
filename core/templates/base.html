@@ -31,8 +31,37 @@
      <!-- MAIN CSS -->
      <link rel="stylesheet" href='{% static "css/tooplate-ben-resume-style.css" %}'>
     
-     
-
+     <!-- CONVERSÃO DO GOOGLE ADS -->
+    <script type="text/javascript">
+        /* <![CDATA[ */
+       goog_snippet_vars = function() {
+         var w = window;
+         w.google_conversion_id = 11111177429;
+         w.google_conversion_label = "fh08CIu09ZIYENW5nLIp";
+         w.google_conversion_value = 13.00;
+         w.google_conversion_currency = "USD";
+         w.google_remarketing_only = false;
+       }
+       // NÃO ALTERE O CÓDIGO ABAIXO.
+       goog_report_conversion = function(url) {
+         goog_snippet_vars();
+         window.google_conversion_format = "3";
+         var opt = new Object();
+         opt.onload_callback = function() {
+         if (typeof(url) != 'undefined') {
+           window.location = url;
+         }
+       }
+       var conv_handler = window['google_trackConversion'];
+       if (typeof(conv_handler) == 'function') {
+         conv_handler(opt);
+         }
+           }
+       /* ]]> */
+       </script>
+       <script type="text/javascript"
+       src="//www.googleadservices.com/pagead/conversion_async.js">
+       </script>
 </head>
 
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
@@ -71,7 +100,7 @@
               </ul>
 
               <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                <a onclick="return gtag_report_conversion('{{ i.whatsapp }}');" href="{{ i.whatsapp }}" class="custom-btn btn" target="_blank" title="Clique para falar via WhatsApp">WhatsApp</a>
+                <a onclick="goog_report_conversion ('{{i.whatsapp}}')" href="{{ i.whatsapp }}" class="custom-btn btn" target="_blank" title="Clique para falar via WhatsApp">WhatsApp</a>
               </div>
           </div>
 
@@ -95,8 +124,8 @@
                   {% if forloop.counter == 1 %}
                   <p>{{i.email}}<i class="fas fa-arrow-right custom-icon"></i></p>
                   <ul class="social-links mt-2">
-                    <li><a onclick="return gtag_report_conversion('{{ i.instagram }}');" href="{{ i.instagram }}" rel="noopener" class="fab fa-instagram" alt="Link para o Instagram" target="_blank"></a></li>
-                    <li><a onclick="return gtag_report_conversion('{{ i.whatsapp }}');" href="{{ i.whatsapp }}" rel="noopener" class="fab fa-whatsapp-square" alt="Link para o WhatsApp" target="_blank"></a></li>
+                    <li><a onclick="goog_report_conversion ('{{i.instagram}}')" href="{{ i.instagram }}" rel="noopener" class="fab fa-instagram" alt="Link para o Instagram" target="_blank"></a></li>
+                    <li><a onclick="goog_report_conversion ('{{i.whatsapp}}')" href="{{ i.whatsapp }}" rel="noopener" class="fab fa-whatsapp-square" alt="Link para o WhatsApp" target="_blank"></a></li>
                   </ul>
                   {%endif%}
               {%endfor%}
