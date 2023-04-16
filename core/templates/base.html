@@ -21,16 +21,13 @@
      <meta name="keywords" content="{{ i.keywords }}">
      <meta name="author" content="Tooplate">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
      <link rel="shortcut icon" type="image/png" href='{% static "images/favicon.png" %}'>
      <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
      <link rel="stylesheet" href='{% static "css/all.min.css" %}'>
      <link rel="stylesheet" href='{% static "css/owl.carousel.min.css" %}'>
      <link rel="stylesheet" href='{% static "css/owl.theme.default.min.css" %}'>
-
      <!-- MAIN CSS -->
      <link rel="stylesheet" href='{% static "css/tooplate-ben-resume-style.css" %}'>
-    
      <!-- CONVERSÃO DO GOOGLE ADS -->
     <script type="text/javascript">
         /* <![CDATA[ */
@@ -63,56 +60,44 @@
        src="//www.googleadservices.com/pagead/conversion_async.js">
        </script>
 </head>
-
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6597FR"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        
+        <!-- End Google Tag Manager (noscript) -->       
   <!-- MENU BAR -->
   <nav class="navbar navbar-expand-lg">
       <div class="container">
-
-          <a class="navbar-brand" href="#">{{i.name}}</a>
-          
+          <a class="navbar-brand" href="#">{{i.name}}</a>        
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mx-auto">
                   <li class="nav-item">
                       <a href="#intro" class="nav-link smoothScroll" alt="Link da introdução">Introdução</a>
                   </li>
-
                   <li class="nav-item">
                       <a href="#about" class="nav-link smoothScroll" alt="Conheça os procedimentos">Procedimentos</a>
                   </li>
-
                   <li class="nav-item">
                       <a href="#testimonials" class="nav-link smoothScroll" alt="O que os clientes falam">Depoimentos</a>
                   </li>
-
                   <li class="nav-item">
                       <a href="#contact" class="nav-link smoothScroll" alt="Fale conosco">Contato</a>
                   </li>
               </ul>
-
               <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
                 <a onclick="goog_report_conversion ('{{i.whatsapp}}')" href="{{ i.whatsapp }}" class="custom-btn btn" target="_blank" title="Clique para falar via WhatsApp">WhatsApp</a>
               </div>
           </div>
-
       </div>
   </nav>
   {% endif %}
 {% endfor %}
-
 {% block content %}
 
 {% endblock %}
-
 <section class="contact section-padding pt-0" id="contact">
 <div class="container">
   <div class="row"> 
@@ -144,6 +129,5 @@
 <script src='{% static "js/smoothscroll.js" %}'></script>
 <script src='{% static "js/owl.carousel.min.js" %}'></script>
 <script src='{% static "js/custom.js" %}'></script>
-
 </body>
 </html>
