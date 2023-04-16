@@ -21,3 +21,7 @@ settings_test.py
 sitemap_video.xml
 
 sitemap2.xml
+
+imagens/*
+
+Palavras-chaves.xlsx
