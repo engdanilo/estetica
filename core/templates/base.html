@@ -89,7 +89,7 @@
                   </li>
               </ul>
               <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
-                <a onclick="goog_report_conversion ('{{i.whatsapp}}')" href="{{ i.whatsapp }}" class="custom-btn btn" target="_blank" title="Clique para falar via WhatsApp">WhatsApp</a>
+                <a onclick="goog_report_conversion ('{{i.whatsapp}}')" href="{{ i.whatsapp }}" class="custom-btn btn" title="Clique para falar via WhatsApp">WhatsApp</a>
               </div>
           </div>
       </div>
@@ -110,8 +110,8 @@
                   {% if forloop.counter == 1 %}
                   <p>{{i.email}}<i class="fas fa-arrow-right custom-icon"></i></p>
                   <ul class="social-links mt-2">
-                    <li><a onclick="goog_report_conversion ('{{i.instagram}}')" href="{{ i.instagram }}" rel="noopener" class="fab fa-instagram" alt="Link para o Instagram" target="_blank"></a></li>
-                    <li><a onclick="goog_report_conversion ('{{i.whatsapp}}')" href="{{ i.whatsapp }}" rel="noopener" class="fab fa-whatsapp-square" alt="Link para o WhatsApp" target="_blank"></a></li>
+                    <li><a href="{{ i.instagram }}" rel="noopener" class="fab fa-instagram" alt="Link para o Instagram" target="_blank"></a></li>
+                    <li><a onclick="goog_report_conversion ('{{i.whatsapp}}')" href="{{ i.whatsapp }}" rel="noopener" class="fab fa-whatsapp-square" alt="Link para o WhatsApp"></a></li>
                   </ul>
                   <p>Setor Santa Genoveva - Goiânia/GO</p>
                   {%endif%}
